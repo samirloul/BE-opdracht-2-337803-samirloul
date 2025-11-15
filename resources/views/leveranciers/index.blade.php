@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<!-- commit: US01-03 -->
 
 @section('content')
     <h2>Overzicht leveranciers</h2>
