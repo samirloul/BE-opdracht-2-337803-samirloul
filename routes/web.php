@@ -37,3 +37,18 @@ use App\Http\Controllers\LeverancierController;
 
 Route::get('/leveranciers', [LeverancierController::class, 'index'])
     ->name('leveranciers.index');
+
+Route::get('/leveranciers/{leverancier}', [LeverancierController::class, 'showProducts'])
+    ->name('leveranciers.producten');
+
+    Route::get('/leveranciers/{leverancier}/producten', 
+    [LeverancierController::class, 'showProducts'])
+    ->name('leveranciers.producten');
+
+Route::get('/leveringen/nieuw', [LeverancierController::class, 'createLevering'])
+    ->name('leveringen.create');
+
+Route::post('/leveringen/opslaan', [LeverancierController::class, 'storeLevering'])
+    ->name('leveringen.store');
+Route::get('/leveringen/nieuw', [LeverancierController::class, 'createLevering'])
+    ->name('leveringen.create');
