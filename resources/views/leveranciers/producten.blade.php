@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<!-- commit: US01-04 -->
 
 @section('content')
     <h2>Geleverde producten van: {{ $leverancier->Naam }}</h2>
