@@ -28,3 +28,4 @@ BEGIN
     ORDER BY AantalVerschillendeProducten DESC;
 END //
 DELIMITER ;
+-- **********************************************************************************
