@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Jamin Backend</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
     {{-- hier kun je later css/js includen --}}
 </head>
 <body>
@@ -17,19 +19,24 @@
     </header>
 
     {{-- FLASH MELDINGEN --}}
-    @if (session('success'))
-        <p style="color: green; font-weight: bold;">
-            {{ session('success') }}
-        </p>
-    @endif
+   @if (session('success'))
+    <div class="alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
-    @if ($errors->any())
-        <ul style="color: red;">
+
+
+   @if ($errors->any())
+    <div class="alert-error">
+        <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-    @endif
+    </div>
+@endif
+
 
     <main>
         @yield('content')
